@@ -1,8 +1,11 @@
 import React from 'react'
+import Digital from './Nadia_Digital_clients/Digital'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Digital/>
+    </div>
   )
 }
 

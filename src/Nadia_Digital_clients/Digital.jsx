@@ -14,9 +14,8 @@ const Digital = () => {
      <div className="container">
       <img src={greatSince} alt="" />
      </div>
-    </section>
     
-    </>
+    </section></>
   )
 }
 

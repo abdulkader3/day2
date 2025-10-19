@@ -1,11 +1,11 @@
 import React from 'react'
-import Subah_business from '../Subah_component/Subah_business'
+import Business from '../Subah_component/Business'
 
 const Home = () => {
   return (
     <div>
        
-       <Subah_business/>
+      <Business/>
     </div>
   )
 }

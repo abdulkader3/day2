@@ -10,7 +10,7 @@ import market from "../images/market.png"
 const Subah_business = () => {
   return (
     <>
-    <div className="container mt-[94px]">
+    <div className="container relative mt-[94px]">
 
       <div className="flex justify-baseline">
          <div className="left">

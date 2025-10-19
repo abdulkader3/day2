@@ -12,7 +12,7 @@ const Business = () => {
      <section className='mt-[94px] relative'>
 
         {/* background image start */}
-        <div className="background-image absolute z-[-1] top-[140px]">
+        <div className="background-image w-full absolute z-[-1] top-[140px] ">
 
             <img src={backgroundimage} alt='err'/>
         </div>

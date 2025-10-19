@@ -4,6 +4,8 @@ import Navbar from '../component/Navbar.jsx'
 import Section from '../component/Section.jsx'
 import Digital from '../Nadia_Digital_clients/Digital.jsx'
 import Clients from '../Nadia_Digital_clients/Clients.jsx'
+import Business from '../Subah_component/Business.jsx'
+
 
 
 
@@ -14,7 +16,8 @@ const Home = () => {
       <Section/>
       <Subah_business/>
       <Digital />
-      <Clients />
+      <Clients />       
+      <Business />
     </div>
   )
 }

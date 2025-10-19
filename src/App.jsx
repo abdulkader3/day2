@@ -1,9 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import Home from './page/Home.jsx'
+import React from 'react'
+
 
 function App() {
   const shanto = createBrowserRouter(
@@ -14,13 +13,14 @@ function App() {
     )
   )
 
+
+
   return (
+
     <>
 
     <RouterProvider router={shanto}/>
       
-    </>
-  )
-}
+    </> )}
 
-export default App
+export default App ;

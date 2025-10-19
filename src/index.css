@@ -5,5 +5,8 @@
   
 }
 @theme{
-   --font-roboto: "Roboto", sans-serif;
+   --font-roboto: "Roboto", sans-serif;}
+
+@utility container {
+  margin-inline: auto;
 }

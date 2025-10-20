@@ -21,7 +21,7 @@ const Clients = () => {
   
    <p className='text-[rgb(117,117,117)] font-roboto text-[18px] text-center mt-[183px] '>Several selected clients, who already believe in our service.</p>
 <div className='flex gap-[67px]'>
-  <div className='relative'>
+  <div className='relative dark:bg-red-100/10 rounded-full p-3 transition'>
   <img src={Mathew} alt="" className='mt-[113px] dark:brightness-75'/>
   <img src={ellipse} alt="" className='absolute left-[37px] top-[405px] z-[-1] dark:invert'/>
   <img src={dot} alt="" className='absolute top-[102px] left-[313px] z-[-1] dark:invert'/>
@@ -37,13 +37,12 @@ const Clients = () => {
   <img src={ellipse1} alt="" className='w-[184px] h-[184px] absolute top-[100px] left-[35px] z-[-1]'  />
 </div>
 </div>
-   {/* <div className='flex justify-center items-center'>
+{/* <div className='flex justify-center items-center'>
 <button onClick={handleDark} className='dark_btn w-[100px] h-[100px] bg-black text-white dark:text-amber-900 rounded-3xl text-[24px] dark:bg-amber-200 '>{black}</button>
-      </div> */}
+</div> */}
 </div>
-
-    </section>
-  )
+</section>
+)
 }
 
 export default Clients

@@ -9,23 +9,20 @@ const Business = () => {
   return (
     <>
        {/* business section */}
-     <section className='mt-[94px] relative'>
+     <section className='mt-[94px] '>
 
-        {/* background image start */}
-        <div className="background-image w-full absolute z-[-1] top-[140px] ">
+
+      {/* conatiner */}
+
+        <div className="container pl-[53px] pr-[167px]  relative ">
+
+           {/* background image start */}
+        <div className="background-image w-full absolute z-[-1] top-[140px] right-0">
 
             <img src={backgroundimage} alt='err'/>
         </div>
 
         {/* background image end */}
-
-
-
-
-
-      {/* conatiner */}
-
-        <div className="container pl-[53px] pr-[167px]  ">
            
 
                 {/* business row start */}

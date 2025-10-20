@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState ,useEffect } from 'react'
+import Aos from "aos";
+import "aos/dist/aos.css";
 import box from "../assets/images/box.png"
 import fin from "../assets/images/financial.png"
 import web from "../assets/images/web.png"
@@ -6,19 +8,49 @@ import market from "../assets/images/market.png"
 import backgroundimage from "../assets/images/businessBg.png"
 
 const Business = () => {
+
+   const [dark, setDark] = useState(false);
+
+   useEffect(() => {
+    const html = document.querySelector("html");
+
+    // Function to check dark mode
+    const checkTheme = () => {
+      setDark(html.classList.contains("dark"));
+    };
+
+    checkTheme()
+
+    // Observe changes in the class list
+    const observer = new MutationObserver(() => {
+      checkTheme();
+    });
+
+    observer.observe(html, { attributes: true, attributeFilter: ["class"] });
+
+    // Cleanup observer on unmount
+    return () => observer.disconnect();
+  }, []);
+
+   useEffect(function () {
+      Aos.init({ duration: 1000 , once:false, mirror:true});
+      
+    }, []);
+  
+
   return (
     <>
        {/* business section */}
-     <section className='mt-[94px] '>
+     <section className='mt-[94px] dark:bg-black '>
 
 
       {/* conatiner */}
 
-        <div className="container    relative ">
+        <div className="container pl-[53px]    relative ">
 
            {/* background image start */}
-        <div style={{backgroundImage:`url(${backgroundimage})` ,backgroundRepeat:'no-repeat' ,backgroundSize:"cover"}}  
-        className="backgorund-image w-full h-[85%] absolute z-[-1] top-[140px] right-0">
+        <div style={dark?{}:{backgroundImage:`url(${backgroundimage})` ,backgroundRepeat:'no-repeat' ,backgroundSize:"cover"}}  
+        className="backgorund-image w-full h-[95%] absolute z-[-1] top-[140px] right-0 ">
 
             {/* <img src={backgroundimage} alt='err'/> */}
         </div>
@@ -28,14 +60,15 @@ const Business = () => {
 
                 {/* business row start */}
 
-            <div className="business_row pl-[53px] flex gap-[103px] ">
+            <div className="business_row pl-[53px] flex gap-[103px] animate-pulse ">
 
                 {/* left part start */}
 
-                <div className="leftpart">
+                <div className="leftpart" >
                     <h2 className='w-[328px]
-                    text-[40px] font-roboto font-normal mt-[357px] text-[#000000]'>How can we help your Business ?</h2>
-                    <p className='w-[350px] text-base font-roboto font-normal text-[#565656] mt-[34px]'>
+                    text-[40px] font-roboto font-normal mt-[357px] text-[#000000] dark:text-white' data-aos="fade-up-left">How can we help your Business ?</h2>
+                    <p className='w-[350px] text-base font-roboto font-normal text-[#565656]
+                     mt-[34px] dark:text-white' data-aos="fade-up-right">
                         We build readymade websites, mobile applications, and elaborate online business services.</p>
                        
                 </div>
@@ -44,7 +77,7 @@ const Business = () => {
 
                 {/*right part start */}
 
-                <div className="right_part flex gap-[33px]">
+                <div className="right_part flex gap-[33px]" >
 
                     {/* right part first card col start */}
 
@@ -52,27 +85,29 @@ const Business = () => {
 
                         {/* right part first card col first card start */}
 
-                        <div className="business_card bg-[#FFFFFF] mt-[79px] w-[298px] pt-[39px]
-                         pb-[57px] px-[30px] border border-[#F2F2F2] rounded-[40px] flex flex-col justify-center items-center gap-[31px]">
+                        <div className="business_card bg-[#FFFFFF] dark:bg-gray-800 mt-[79px] w-[298px] pt-[39px]
+                         pb-[57px] px-[30px] border border-[#F2F2F2] rounded-[40px] flex flex-col justify-center 
+                         items-center gap-[31px]" data-aos='zoom-in-left'>
                             <div className="img">
                                <img src={box} alt='err'/>
                             </div>
-                            <h2 className='text-center text-[24px] font-normal font-roboto'>Business Idea 
+                            <h2 className='text-center text-[24px] font-normal font-roboto dark:text-white'>Business Idea 
                              Planning</h2>
-                             <p className='text-center text-base font-normal font-roboto text-[#757575]'>We present you a proposal and discuss niffty-gritty like</p>
+                             <p className='text-center text-base font-normal font-roboto text-[#757575] dark:text-white'>We present you a proposal and discuss niffty-gritty like</p>
  
                         </div>
                         {/* right part first card col first card end */}
 
                         {/* right part first card col second card start */}
-                         <div className="web_card  bg-[#FFFFFF] w-[298px] pt-[39px]
-                         pb-[57px] px-[30px] border border-[#F2F2F2] rounded-[40px] flex flex-col justify-center items-center gap-[31px]">
+                         <div className="web_card  bg-[#FFFFFF] dark:bg-gray-800 w-[298px] pt-[39px]
+                         pb-[57px] px-[30px] border border-[#F2F2F2] rounded-[40px] flex flex-col 
+                         justify-center items-center gap-[31px]" data-aos='zoom-in-right'>
                             <div className="img">
                                <img src={web} alt='err'/>
                             </div>
-                            <h2 className='text-center text-[24px] font-normal font-roboto'>Development
+                            <h2 className='text-center text-[24px] font-normal font-roboto dark:text-white'>Development
                                  <span className='block' >Website and App</span></h2>
-                             <p className='text-center text-base font-normal font-roboto text-[#757575]
+                             <p className='text-center text-base font-normal font-roboto text-[#757575] dark:text-white
                              '>Communication protocols apart from engagement models</p>
  
                         </div>
@@ -88,15 +123,16 @@ const Business = () => {
 
                            {/* right part second card col first card start */}
 
-                           <div className="fin_card bg-[#FFFFFF] w-[298px] pt-[39px]
-                         pb-[57px] px-[30px] border border-[#F2F2F2] rounded-[40px] flex flex-col justify-center items-center gap-[31px]">
+                           <div className="fin_card bg-[#FFFFFF] dark:bg-gray-800 w-[298px] pt-[39px]
+                         pb-[57px] px-[30px] border border-[#F2F2F2] rounded-[40px] flex flex-col justify-center 
+                         items-center gap-[31px]" data-aos='fade-down-left'>
                             <div className="img">
                                <img src={fin} alt='err'/>
                             </div>
-                            <h2 className='text-center text-[24px] font-normal font-roboto'>Financial
+                            <h2 className='text-center text-[24px] font-normal font-roboto dark:text-white'>Financial
                                 <span className='block'>Planning System</span></h2>
                              <p className='text-center text-base font-normal font-roboto
-                              text-[#757575]'> Protocols apart from aengage models, pricing billing </p>
+                              text-[#757575] dark:text-white'> Protocols apart from aengage models, pricing billing </p>
  
                         </div>
 
@@ -105,12 +141,13 @@ const Business = () => {
 
                        {/* right part second card col second card start */}
 
-                         <div className="market_card bg-[#FFFFFF] w-[298px] pt-[39px]
-                         pb-[57px] px-[30px] border border-[#F2F2F2] rounded-[40px] flex flex-col justify-center items-center gap-[31px]">
+                         <div className="market_card bg-[#FFFFFF] dark:bg-gray-800 w-[298px] pt-[39px]
+                         pb-[57px] px-[30px] border border-[#F2F2F2] rounded-[40px] flex flex-col justify-center 
+                         items-center gap-[31px]" data-aos='fade-down-right'>
                             <div className="img">
                                <img src={market} alt='err'/>
                             </div>
-                            <h2 className='text-center text-[24px] font-normal font-roboto'>Market Analysis Project</h2>
+                            <h2 className='text-center text-[24px] font-normal font-roboto dark:text-white'>Market Analysis Project</h2>
                             
                         </div> 
 

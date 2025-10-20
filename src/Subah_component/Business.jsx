@@ -18,7 +18,7 @@ const Business = () => {
 
            {/* background image start */}
         <div style={{backgroundImage:`url(${backgroundimage})` ,backgroundRepeat:'no-repeat' ,backgroundSize:"cover"}}  
-        className="backgorund-image w-[98%] h-[85%] absolute z-[-1] top-[140px] right-0">
+        className="backgorund-image w-full h-[85%] absolute z-[-1] top-[140px] right-0">
 
             {/* <img src={backgroundimage} alt='err'/> */}
         </div>

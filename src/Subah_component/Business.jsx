@@ -14,12 +14,13 @@ const Business = () => {
 
       {/* conatiner */}
 
-        <div className="container pl-[53px] pr-[167px]  relative ">
+        <div className="container    relative ">
 
            {/* background image start */}
-        <div className="background-image w-full absolute z-[-1] top-[140px] right-0">
+        <div style={{backgroundImage:`url(${backgroundimage})` ,backgroundRepeat:'no-repeat' ,backgroundSize:"cover"}}  
+        className="backgorund-image w-[98%] h-[85%] absolute z-[-1] top-[140px] right-0">
 
-            <img src={backgroundimage} alt='err'/>
+            {/* <img src={backgroundimage} alt='err'/> */}
         </div>
 
         {/* background image end */}
@@ -27,7 +28,7 @@ const Business = () => {
 
                 {/* business row start */}
 
-            <div className="business_row flex gap-[103px] ">
+            <div className="business_row pl-[53px] flex gap-[103px] ">
 
                 {/* left part start */}
 

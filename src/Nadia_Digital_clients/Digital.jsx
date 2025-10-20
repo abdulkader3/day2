@@ -1,12 +1,14 @@
 import React, {  useEffect, useState } from 'react'
 import digital from '../assets/images/digital_banner.png'
 import ellipse from '../assets/images/Ellipse 86.png'
+
 import rectangle from '../assets/images/Rectangle 26.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
  
 const Digital = () => {
+  
   const [black,setblack]=useState('Dark')
   const [spin,setSpin]=useState(false)
   const [bounce,setBounce]=useState(false)
@@ -40,14 +42,14 @@ const handleDark = () => {
     <section className='Digital dark:bg-black'>
 <div className="container px-[120px]">
       <div className='flex gap-[80px]'>
-           <div className='mt-[146px] relative'>
+           <div className='mt-[146px] relative dark:bg-white/10 rounded-xl p-3 transition'>
           <img src={digital} alt="" className='w-[550px] h-[372px]"'/>
-          <img src={ellipse} alt="" className='w-[129px] h-[129px] absolute left-[416px] top-[249px] z-[-1] border border-white dark:border-red-400 rounded-full '/>
+          <img src={ellipse} alt="" className='w-[129px] h-[129px] absolute left-[416px] top-[249px] z-[-1] '/>
      
       </div>
       <div className='relative'>
-        <h2 className={`w-[468px] h-[94px] text-[#000000] font-roboto font-semibold text-[40px] mt-[228px] dark:text-white ${bounce? 'animate-bounce':''} data-aos="fade-left"`}>Great Digital Product Agency since 2016 </h2>
-        <p className='w-[532px] h-[104px] text-[#565656] font-roboto mt-[34px] dark:text-white data-aos="zoom-in'>Our Business Plan is a written document describing a company's core business activites, Objectives, and how it plans to achieve its goals. Our goal is to provide our client high quality Product with modern idea accordingly their budgets and according thir reuirements.</p>
+        <h2 className={`w-[468px] h-[94px] text-[#000000] font-roboto font-semibold text-[40px] mt-[228px] dark:text-white ${bounce? 'animate-bounce':''} " ` }>Great Digital Product Agency since 2016 </h2>
+        <p className='w-[532px] h-[104px] text-[#565656] font-roboto mt-[34px]  data-aos="zoom-in'>Our Business Plan is a written document describing a company's core business activites, Objectives, and how it plans to achieve its goals. Our goal is to provide our client high quality Product with modern idea accordingly their budgets and according thir reuirements.</p>
       <img src={rectangle} alt="" className='w-[178px] h-[178px] absolute top-[199px] z-[-1] left-[-31px]'/>
       </div>
       </div>

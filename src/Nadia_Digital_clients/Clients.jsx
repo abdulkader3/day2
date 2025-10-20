@@ -1,37 +1,30 @@
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react'
 import Mathew from '../assets/images/mathew.png'
 import ellipse from '../assets/images/Ellipse 94.png'
 import dot from '../assets/images/Dot.png'
 import clients from '../assets/images/clients.png'
 import ellipse1 from '../assets/images/Ellipse 86.png'
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-const Example = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);}
+
+ 
+  
 const Clients = () => {
-  //  const [black,setblack]=useState('Dark')
-//   const handleDark=()=>{
-//  const main_html=document.querySelector('html')
-//  main_html.classList.toggle('dark')
-// if(main_html.classList.contains('dark')){
-//   setblack('Dark')
-// }
-// else{
-//    setblack('Light') 
-// }
-//   }
+
+ useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <section className='dark:bg-black'>
 <div className="container ">
   
-   <p className='text-[rgb(117,117,117)] font-roboto text-[18px] text-center mt-[183px] dark:text-white'>Several selected clients, who already believe in our service.</p>
+   <p className='text-[rgb(117,117,117)] font-roboto text-[18px] text-center mt-[183px] '>Several selected clients, who already believe in our service.</p>
 <div className='flex gap-[67px]'>
   <div className='relative'>
-  <img src={Mathew} alt="" className='mt-[113px]'/>
-  <img src={ellipse} alt="" className='absolute left-[37px] top-[405px] z-[-1] '/>
-  <img src={dot} alt="" className='absolute top-[102px] left-[313px] z-[-1]'/>
+  <img src={Mathew} alt="" className='mt-[113px] dark:brightness-75'/>
+  <img src={ellipse} alt="" className='absolute left-[37px] top-[405px] z-[-1] dark:invert'/>
+  <img src={dot} alt="" className='absolute top-[102px] left-[313px] z-[-1] dark:invert'/>
 
 </div>
 <div className='mt-[197px]'>
